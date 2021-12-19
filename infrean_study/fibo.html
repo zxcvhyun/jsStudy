@@ -1,0 +1,30 @@
+<script>
+	// 1 1 2 3 5 8 13 21 ...
+	// n =  수열 n-2번째 + 수열 + n-1번째
+
+	var n2 = 1;
+	var n1 = 1;
+
+	console.log(n2);
+	console.log(n1);
+
+	for (var i = 0; i < 100; i++) {
+		var n = n2 + n1;
+		console.log(n);
+		n2 = n1;
+		n1 = n;
+	}
+
+	n2 = 1;
+	n1 = 1;
+
+	console.log(n2);
+	console.log(n1);
+
+	while (n1 < 10000) {
+		var n = n2 + n1;
+		console.log(n);
+		n2 = n1;
+		n1 = n;
+	}
+</script>

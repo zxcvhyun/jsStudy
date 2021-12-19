@@ -1,0 +1,36 @@
+<script>
+	var list = [
+		{
+			question: '가장 좋아하는 과일을 선택해주세요',
+			options: ['사과', '복숭아', '포도', '바나나', '딸기'],
+		},
+		{
+			question: '가장 좋아하는 음식을 선택해주세요',
+			options: ['중식', '양식', '한식', '일식', '그외'],
+		},
+		{
+			question: '가장 좋아하는 동물을 선택해주세요',
+			options: ['강아지', '고양이', '토끼', '새', '파충류'],
+		},
+	];
+
+	console.log(list);
+
+	for (var i = 0; i < list.length; i++) {
+		var questionMessage = list[i].question + '\n';
+
+		//list[i] => 현재 질문지 객체
+		for (var j = 0; j < list[i].options.length; j++) {
+			questionMessage += j + 1 + '. ' + list[i].options[j] + '\n';
+		}
+
+		list[i].answer = prompt(questionMessage);
+
+		console.log(list[i]);
+	}
+
+	for (var i = 0; i < list.length; i++) {
+		var index = parseInt(list[i].answer);
+		alert(list[i].question + '\n당신의 선택 : ' + list[i].options[index - 1]);
+	}
+</script>
